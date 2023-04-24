@@ -10,13 +10,13 @@ on:
 
 jobs:
   build-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: python3 -V
 
   test-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: python3 calculator.py
@@ -25,7 +25,7 @@ jobs:
           type: "python"
 
   deploy-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: echo "Finalizado!"
